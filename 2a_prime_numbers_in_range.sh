@@ -1,24 +1,22 @@
 #!/bin/bash
-echo "Enter start : "
-read low;
-echo "Enter end : "
-read high;
-
-echo "the prime between  $low and $high is"
-
-for (( i=low;i<=high;i++ ))
+# Program to generate the prime numbers of a given range
+echo "Enter the lower bound: "
+read n1
+echo "Enter the upper bound: "
+read n2
+for ((i=n1; i<=n2; i++))
 do
-for (( j=2;j<$i/2;j++ ))
+for ((j=2; j<$i/2; j++))
 do
-if [ $((i%j)) -q 0 ]
+if [[ $((i%j)) == 0 ]]
 then
 flag=1
 break
 fi
 done
-if [ $flag == 0 ]
+if [[ $flag == 0 ]]
 then
-echo  -ne " $i "
+echo -ne "$i " #This prints the numbers in a single line
 fi
 flag=0
 done
