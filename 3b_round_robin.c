@@ -12,16 +12,17 @@ typedef struct {
 } Process;
 
 void swap(Process *a, Process *b) {
-    Process temp = *a;
-    *a = *b;
-    *b = temp;
+    
 }
 
 void sortByArrival(int n, Process p[]) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
             if (p[j].arrival > p[j + 1].arrival) {
-                swap(&p[j], &p[j + 1]);
+                Process temp = p[j];
+                 p[j]=p[j+1];
+                 p[j+1]=temp;
+    
             }
         }
     }

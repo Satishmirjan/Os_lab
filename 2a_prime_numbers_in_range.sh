@@ -10,7 +10,7 @@ for (( i=low;i<=high;i++ ))
 do
 for (( j=2;j<$i/2;j++ ))
 do
-if [ $((i%j)) == 0 ]
+if [ $((i%j)) -q 0 ]
 then
 flag=1
 break
