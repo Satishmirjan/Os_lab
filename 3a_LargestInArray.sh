@@ -37,4 +37,4 @@ then
 max=${arr[$i]}
 fi
 done
-echo "The largest of the given numbers is $ma
+echo "The largest of the given numbers is $max"
