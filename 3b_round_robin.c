@@ -11,9 +11,7 @@ typedef struct {
     int inQueue;    // Flag 
 } Process;
 
-void swap(Process *a, Process *b) {
-    
-}
+
 
 void sortByArrival(int n, Process p[]) {
     for (int i = 0; i < n - 1; i++) {
