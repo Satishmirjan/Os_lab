@@ -67,7 +67,7 @@ int main(int arguementCount,char *arguementVector[]) {
         	printf("The prime numbers in the range %d and %d are:\n", i, j);
         	for (int num = i; num < j; num++) {
         		flag = 0;
-        		for (int k = 2; k <= n/2; k++) {
+        		for (int k = 2; k <= num/2; k++) {
                     	 if (num % k == 0) {
                     	 	flag = 1;
                     	 	break;
